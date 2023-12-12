@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script>
+        function updateTime() {
+            //Get the current time
+            var currentTime = new Date();
+
+            //Format the time in HH:MM
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+
+            // Add leading zeros were required
+            hours = (hours < 10) ? "0" + hours : hours;
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            var currentTimeStr = "Current Time: " + hours + ":" + minutes;
+            document.getElementById("currentTime").innerHTML = currentTimeStr;
+        }
+
+        // Update time every 1000 milliseconds
+        setInterval(updateTime, 1000);
+
+        // Initialize time display
+        updateTime();
+    </script>
+    <div class="header">
+        <p>Username:bob.dole</p>
+        <h1>My awesome app!</h1>
+        <p id="currentTime">Current Time: </p>
+    </div>
+    <div class="main_content">
+        <div class="column column_one">
+            <!-- Column Header -->
+            <div class="column_one_sections">
+                <h2>Please complete the below form</h2>
+                Please go to <a href="">DWP Place</a> for more information
+            </div>
+            <!-- Personal Info -->
+            <form>
+                <div class="personal_info column_one_sections">
+                    <h3>Personal Information</h3>
+                    <label for="name">
+                        Name <input id="name" name="name" type="text">
+                    </label>
+                    <label for="phone">
+                        Phone <input id="phone" name="phone" type="number">
+                    </label>
+                    <label for="title">
+                        Title <select id="title" name="title">
+                                <option value="Mr">Mr</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Mrs">Mrs</option>
+                            </select>
+                    </label>
+                </div>
+                <!-- Dietary Info -->
+                <div class="column_one_sections">
+                    <h3>Dietary Info</h3>
+                    <fieldset class="meal_radio_grp">
+                        <legend>Favourite Meal</legend>
+                        <div>
+                            <input type="radio" id="breakfast" name="fav_meal">
+                            <label for="breakfast"> Breakfast</label>
+                        </div>
+                        <div>
+                            <label for="lunch"><input type="radio" id="lunch" name="fav_meal"> lunch</label>
+                        </div>
+                        <div>
+                            <label for="tea"><input type="radio" id="tea" name="fav_meal"> tea</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="allergen_radio_grp">
+                        <legend>Alergens (tick all that apply)</legend>
+                        <ul>
+                            <li> Nuts <input type="checkbox" id="nuts" name="nut_allergy"></li>
+                            <li>Gluten <input type="checkbox" id="gluten" name="gluten_allergy"></li>
+                            <li>Dairy <input type="checkbox" id="dairy" name="dairy_allergy"></li>
+                        </ul>
+                    </fieldset>
+                </div>       
+                <!-- Submit Section -->
+                <div>
+                    <input type="submit" value="Submit" class="buttonSubmit">
+                </div>
+            </form>
+
+        </div>
+        <div class="column">
+            <div class="img_placeholder">A picture goes here</div>
+            <div class="img_placeholder">A picture goes here</div>
+            <div class="img_placeholder">A picture goes here</div>
+        </div>
+    </div>
+</body>
+</html>

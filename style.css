@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+    background-color: #d3d3d3;
+  }
+  
+  ul {
+    margin: 0;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  body {
+    margin: 0;
+  }
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #a9a9a9;
+    padding: 10px;
+}
+.main_content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: 10px;
+}
+.column {
+    flex: 0 0 30%;
+}
+.column:first-child {
+    flex: 1;
+}
+.column:last-child {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 30%;
+    align-items: center;
+}
+.column_one_sections {
+    padding: 10px 0;
+    border-bottom: black 1px dashed;
+}
+.personal_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.column_one label{
+    padding-top: 10px;
+}
+.meal_radio_grp, .allergen_radio_grp {
+    display: flex;
+    padding: 5px 0 0 0;
+    border: none;
+    margin: 10px 0 0 0;
+}
+.allergen_radio_grp {
+    flex-direction: column;
+}
+.buttonSubmit {
+    margin-top: 10px;
+}
+.img_placeholder {
+    width: 250px;
+    height: 250px;
+    background-color: #9932cc;
+    margin: 10px;
+    text-align: center;
+}
+
